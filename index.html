@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CaffeCloud - Vaše omiljeno mjesto za kavu, kolače i ugodno druženje. Otkrijte našu ponudu.">
+    <meta name="keywords" content="kafić, kava, kolači, torte, pića, CaffeCloud, opuštanje">
+    <title>CaffeCloud - Dobrodošli!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon - generirajte svoj na https://realfavicongenerator.net/ i zamijenite linkove -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">CaffeCloud</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Početna</a></li>
+                <li><a href="menu.html">Meni</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Dobrodošli u CaffeCloud</h1>
+            <p>Mjesto gdje se svaki gutljaj kave i zalogaj slastice pretvara u čisti užitak.</p>
+            <a href="menu.html" class="btn">Pogledajte Naš Meni</a>
+        </div>
+    </header>
+    <!-- CSS za Hero Section (dodati u style.css) -->
+    <style>
+        .hero-section {
+            height: 90vh; /* Visina skoro cijelog ekrana */
+            background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'); /* Atraktivna slika kafića */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-text-color);
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Tamni overlay za bolju čitljivost teksta */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--light-text-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f0f0f0; /* Svjetliji tekst na tamnoj pozadini */
+        }
+        @media screen and (max-width: 768px) {
+            .hero-section { height: 70vh; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1.1rem; }
+        }
+    </style>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Unutrašnjost CaffeCloud kafića">
+            </div>
+            <div class="about-text">
+                <h2>Priča o CaffeCloud</h2>
+                <p>CaffeCloud nije samo kafić – to je doživljaj. Rođeni iz strasti prema savršenoj šalici kave i umjetnosti slastičarstva, stvorili smo prostor gdje se svaki gost osjeća kao kod kuće. Naša misija je pružiti vam trenutke opuštanja i uživanja uz najkvalitetnije napitke i delicije.</p>
+                <p>Koristimo samo svježe pržena zrna kave odabranih sorti i pažljivo birane sastojke za naše kolače i torte. Bilo da tražite miran kutak za rad, mjesto za druženje s prijateljima ili samo želite uživati u trenutku za sebe, CaffeCloud je tu za vas.</p>
+                <a href="contact.html#location" class="btn">Pronađite Nas</a>
+            </div>
+        </div>
+    </section>
+    <!-- CSS za About Us Section (dodati u style.css) -->
+    <style>
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .about-text {
+            flex: 1.2; /* Daje malo više prostora tekstu */
+        }
+        @media screen and (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="section-padding" style="background-color: #fff;"> <!-- Svjetlija pozadina za kontrast -->
+        <div class="container">
+            <h2 class="text-center">Izdvojeno iz Ponude</h2>
+            <p class="text-center subtitle">Okusi koji će vas oduševiti na prvi gutljaj i zalogaj.</p>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="https://www.philips.hr/c-dam/b2c/ro_RO/experience/Blog/retete-cappuccino/retete-cappuccino-thumb.jpg" alt="Cappuccino Art">
+                    <h3>Savršeni Cappuccino</h3>
+                    <p>Baršunasta mliječna pjena i bogati espresso – klasik koji nikad ne izlazi iz mode.</p>
+                </div>
+                <div class="featured-item">
+                    <img src="https://www.slatkopedija.hr/wp-content/uploads/2018/03/cokoladna_fantazija_1.jpg" alt="Čokoladna torta">
+                    <h3>Čokoladna fantazija</h3>
+                    <p>Sočna čokoladna torta koja se topi u ustima, stvorena za prave hedoniste.</p>
+                </div>
+                <div class="featured-item">
+                    <img src="https://www.fitness.com.hr/images/articles/smoothies.jpg" alt="Svježi smoothie">
+                    <h3>Voćni Smoothie</h3>
+                    <p>Eksplozija vitamina i svježine u čaši – idealan za početak dana ili popodnevni boost.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2.5rem;">
+                <a href="menu.html" class="btn">Cijela Ponuda</a>
+            </div>
+        </div>
+    </section>
+    <!-- CSS za Featured Products Section (dodati u style.css) -->
+    <style>
+        #featured {
+            background-color: #f9f9f9; /* Malo drugačija pozadina da se istakne */
+        }
+        .subtitle {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .featured-item {
+            background-color: var(--light-text-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .featured-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .featured-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .featured-item h3 {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .featured-item p {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            font-size: 0.95rem;
+            min-height: 60px; /* Da kartice budu približno iste visine */
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>© <span id="currentYear"></span> CaffeCloud. Sva prava pridržana.</p>
+            <p>Dizajnirano s ukusom <a href="https://example.com" target="_blank">Vaš Tim</a></p>
+        </div>
+    </footer>
+    <!-- Font Awesome za ikone društvenih mreža -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Ili skinite i lokalno linkajte -->
+    <script src="js/script.js"></script>
+    <script>
+        // Za dinamičko prikazivanje godine u footeru
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

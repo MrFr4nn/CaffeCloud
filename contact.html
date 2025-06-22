@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktirajte CaffeCloud. Pošaljite nam poruku, pronađite nas na karti ili nas nazovite.">
+    <title>CaffeCloud - Kontakt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <!-- Font Awesome za ikone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">CaffeCloud</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="menu.html">Meni</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact-page" class="section-padding">
+        <div class="container">
+            <h1 class="text-center page-title">Stupite u Kontakt</h1>
+            <p class="text-center subtitle">Imate pitanje, prijedlog ili samo želite reći bok? Tu smo za vas!</p>
+
+            <div class="contact-content-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Pošaljite Nam Poruku</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ime i Prezime <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Vaše ime i prezime">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Adresa <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="vaša.email@adresa.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Predmet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Npr. Upit o rezervaciji">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Vaša Poruka <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Napišite svoju poruku ovdje..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-form">Pošalji Poruku</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h2>Informacije</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresa</h3>
+                            <p>Ulica Kave 123, 10000 Zagreb, Hrvatska</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+38512345678">+385 1 234 5678</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@caffecloud.com">info@caffecloud.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Radno Vrijeme</h3>
+                            <p>Pon - Pet: 07:00 - 23:00</p>
+                            <p>Sub - Ned: 08:00 - 00:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-social-links">
+                        <h3>Pratite Nas</h3>
+                        <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="location" class="map-section">
+        <div class="map-overlay-text">
+            <h2>Pronađite Nas Lako</h2>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.390090268138!2d15.97466071588019!3d45.8149200791067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6f7b64c6c99%3A0x42715313014a0855!2sTrg%20bana%20Josipa%20Jela%C4%8Di%C4%87a%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1678886456123!5m2!1shr!2shr"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Lokacija CaffeCloud"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>© <span id="currentYearContact"></span> CaffeCloud. Sva prava pridržana.</p>
+            <p>Dizajnirao s ljubavlju <a href="https://example.com" target="_blank">Vaš Tim</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('currentYearContact').textContent = new Date().getFullYear();
+
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                formStatus.textContent = 'Slanje...';
+                formStatus.className = 'form-status message-sending';
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                // ===== JEDINA PROMJENA JE OVDJE =====
+                const apiEndpoint = 'https://e8jlrvpg8d.execute-api.us-east-1.amazonaws.com/poruka';
+                // ===================================
+
+                try {
+                    const response = await fetch(apiEndpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData),
+                    });
+                    
+                    // Dohvaćamo odgovor od Lambde da možemo ispisati poruku
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        formStatus.textContent = result.message || 'Poruka uspješno poslana!'; // Koristimo poruku iz Lambde
+                        formStatus.className = 'form-status message-success';
+                        contactForm.reset();
+                    } else {
+                        formStatus.textContent = `Greška pri slanju (${response.status}): ${result.message || 'Pokušajte ponovno.'}`;
+                        formStatus.className = 'form-status message-error';
+                    }
+                } catch (error) {
+                    console.error('Fetch Error:', error);
+                    formStatus.textContent = 'Došlo je do mrežne greške. Provjerite vezu i pokušajte ponovno.';
+                    formStatus.className = 'form-status message-error';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

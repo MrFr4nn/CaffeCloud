@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CaffeCloud Meni - Istražite našu bogatu ponudu kava, pića, kolača i torti.">
+    <title>CaffeCloud - Meni</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">CaffeCloud</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="menu.html" class="active">Meni</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="menu-page" class="section-padding">
+        <div class="container">
+            <h1 class="text-center page-title">Meni</h1>
+            <p class="text-center subtitle">Otkrijte svijet okusa napravljen s ljubavlju i pažnjom.</p>
+
+            <div id="menu-category-nav" class="menu-category-nav text-center">
+            </div>
+            <div id="menu-items-container">
+               
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>© <span id="currentYearMenu"></span> CaffeCloud. Sva prava pridržana.</p>
+             <p>Dizajnirao s ljubavlju <a href="https://example.com" target="_blank">Vaš Tim</a></p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/menu-data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('currentYearMenu').textContent = new Date().getFullYear();
+
+        // Funkcija za generiranje HTML-a za meni
+        function displayMenu() {
+            const menuContainer = document.getElementById('menu-items-container');
+            const categoryNavContainer = document.getElementById('menu-category-nav');
+            if (!menuContainer || !categoryNavContainer || typeof menuData === 'undefined') return;
+
+            let categoryNavHTML = '';
+            let menuHTML = '';
+
+            menuData.categories.forEach(category => {
+                // Dodaj link za navigaciju kategorije
+                categoryNavHTML += `<a href="#${category.id}" class="category-nav-link">${category.name}</a>`;
+
+                // Početak sekcije kategorije
+                menuHTML += `
+                    <div id="${category.id}" class="menu-category">
+                        <h2 class="category-title">${category.name}</h2>
+                `;
+
+                category.items.forEach(subCategoryItem => {
+                    menuHTML += `<h3 class="subcategory-title">${subCategoryItem.subCategory}</h3>`;
+                    menuHTML += `<div class="menu-grid">`;
+
+                    subCategoryItem.products.forEach(product => {
+                        menuHTML += `
+                            <div class="menu-item">
+                                <img src="${product.image}" alt="${product.name}" class="menu-item-img" loading="lazy">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="menu-item-name">${product.name}</h4>
+                                        <span class="menu-item-price">${product.price}</span>
+                                    </div>
+                                    <p class="menu-item-description">${product.description}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    menuHTML += `</div>`; // Kraj menu-grid
+                });
+                menuHTML += `</div>`; // Kraj menu-category
+            });
+
+            categoryNavContainer.innerHTML = categoryNavHTML;
+            menuContainer.innerHTML = menuHTML;
+        }
+
+        // Pozovi funkciju kada se DOM učita
+        document.addEventListener('DOMContentLoaded', displayMenu);
+    </script>
+</body>
+</html>
